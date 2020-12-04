@@ -1,0 +1,155 @@
+$red: #ff052f;
+$black: #333;
+$white: #fff;
+$orange: #f1ba63;
+$dark: #000;
+
+$tablet-screen: 768px;
+$mobile-screen: 400px;
+
+/* lato-300 - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''), url('~assets/fonts/lato-v17-latin-300.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('~assets/fonts/lato-v17-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-regular - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('~assets/fonts/lato-v17-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('~assets/fonts/lato-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url('~assets/fonts/lato-v17-latin-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('~assets/fonts/lato-v17-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-900 - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''), url('~assets/fonts/lato-v17-latin-900.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('~assets/fonts/lato-v17-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: auto;
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: $black;
+}
+
+section {
+  padding: 7vw 0;
+}
+
+.row {
+  max-width: 1080px;
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.5em;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+p {
+  margin-bottom: 1em;
+  font-weight: 300;
+}
+
+ul,
+ol {
+  margin-left: 0;
+  padding-left: 3rem;
+  margin-bottom: 1em;
+}
+
+a {
+  color: $red;
+  text-decoration: none;
+}
+
+svg {
+  max-width: 500px;
+}
+
+pre {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  text-align: left;
+}
+
+// UTILITIES
+.db {
+  display: block;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.m05 {
+  margin: 0.5em;
+}
+// UTILITIES
+
+@media (max-width: $mobile-screen) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.2;
+  }
+}
