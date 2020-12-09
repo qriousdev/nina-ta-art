@@ -8,7 +8,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: "Nina' Portfolio" },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Nina Ta | Illustrator | Animator',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -41,6 +45,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/style-resources',
+    '@aceforth/nuxt-optimized-images',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -56,5 +61,9 @@ export default {
 
   generate: {
     fallback: true,
+  },
+
+  optimizedImages: {
+    optimizeImages: true,
   },
 }

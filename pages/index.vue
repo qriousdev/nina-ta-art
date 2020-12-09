@@ -1,63 +1,72 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">nina-ta-art</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <main>
+    <section id="hero">
+      <div class="row">
+        <p class="bubble">Hi, I'm Nina. Welcome to my website!</p>
+        <div
+          class="chibbi"
+          v-html="require('~/assets/img/nina-standing.svg?include')"
+        ></div>
+        <Button setclass="btn-black" link="/my-art/" text="Check out my art" />
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
+<style lang="scss" scoped>
+#hero {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  padding-top: 75px;
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  .row {
+    text-align: center;
+    position: relative;
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  .bubble {
+    font-size: 1.2rem;
+    line-height: 1.4em;
+    position: relative;
+    max-width: 250px;
+    border-radius: 100px;
+    padding: 1em;
+    margin: 0 auto 2.5em;
+    border: 1px solid $dark;
 
-.links {
-  padding-top: 15px;
+    &::before,
+    &::after {
+      content: ' ';
+      position: absolute;
+      left: 55px;
+      bottom: -30px;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 28px;
+      border: 1px solid $dark;
+    }
+
+    &::after {
+      width: 20px;
+      height: 20px;
+      left: 80px;
+      bottom: -40px;
+      border-radius: 18px;
+    }
+
+    @media (max-width: $mobile-screen) {
+      font-size: 1rem;
+    }
+  }
+
+  .chibbi {
+    ::v-deep svg {
+      height: 50vh;
+    }
+  }
 }
 </style>
