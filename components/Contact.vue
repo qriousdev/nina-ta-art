@@ -27,7 +27,7 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="3" required></textarea>
       </p>
-      <input type="hidden" name="form-name" value="contactNuh" />
+      <input type="hidden" name="form-name" value="contact" />
       <p>
         <button type="submit" class="btn-black">Send to Nina</button>
       </p>
