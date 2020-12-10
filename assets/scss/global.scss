@@ -1,7 +1,7 @@
 // COLORS
 $black: #111;
 $white: #fff;
-$dark: #333;
+$dark: rgb(75, 75, 75);
 $red: red;
 $trp: transparent;
 
@@ -112,11 +112,11 @@ h3 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 h3 {
@@ -125,7 +125,6 @@ h3 {
 
 img {
   max-width: 100%;
-  object-fit: contain;
 }
 
 p {

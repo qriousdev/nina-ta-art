@@ -13,9 +13,11 @@
 
       <div class="menu-container">
         <div class="menu">
-          <nuxt-link to="/about">About</nuxt-link>
-          <nuxt-link to="/my-art">My art</nuxt-link>
-          <nuxt-link to="/contact-me">Contact me</nuxt-link>
+          <nuxt-link to="/about" @click.native="toggleMenu">About</nuxt-link>
+          <nuxt-link to="/my-art" @click.native="toggleMenu">My art</nuxt-link>
+          <nuxt-link to="/contact-me" @click.native="toggleMenu"
+            >Contact me</nuxt-link
+          >
         </div>
       </div>
     </nav>
@@ -33,6 +35,8 @@ export default {
       hambuger.classList.toggle('open')
       menu.classList.toggle('expanded')
       logo.classList.toggle('light')
+
+      console.log('clicked')
     },
   },
 }

@@ -119,9 +119,7 @@
       </div>
     </section>
     <div id="lightbox" @click="disableLightbox">
-      <img
-        src="http://localhost:3000/app/assets/img/portfolio/anime/IMG_1990.jpeg"
-      />
+      <img src="" />
     </div>
   </main>
 </template>
@@ -278,31 +276,34 @@ export default {
 #gallery {
   padding-top: 0;
 
-  .row {
-    // column-count: 5;
+  .masonry {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
 
-    .masonry {
-      display: grid;
-      grid-gap: 1rem;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      grid-auto-rows: 250px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        animation: fade 1s ease-in-out;
-        cursor: pointer;
-      }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: fade 1s ease-in-out;
+      cursor: pointer;
     }
+  }
 
-    @keyframes fade {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+  @media (max-width: $tablet-screen) {
+    .masonry {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      grid-auto-rows: 150px;
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }
@@ -322,10 +323,16 @@ export default {
 
   img {
     position: relative;
-    display: block;
     max-height: 70vh;
     max-width: 70vw;
     animation: scale-up 0.2s linear;
+  }
+
+  @media (max-width: $tablet-screen) {
+    img {
+      max-height: 85vh;
+      max-width: 85vw;
+    }
   }
 
   @keyframes scale-up {
