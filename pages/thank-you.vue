@@ -2,7 +2,9 @@
   <main>
     <section id="hero">
       <div class="row">
-        <p class="bubble">Talk to you soon!</p>
+        <p class="bubble">
+          I received your message and will get back to your soon 🙂
+        </p>
         <div
           class="chibbi"
           v-html="require('~/assets/img/nina-standing.svg?include')"

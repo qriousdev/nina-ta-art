@@ -13,12 +13,17 @@
 
       <div class="menu-container">
         <div class="menu">
-          <nuxt-link to="/about" @click.native="toggleMenu">About</nuxt-link>
           <nuxt-link to="/my-art" @click.native="toggleMenu">My art</nuxt-link>
           <nuxt-link to="/contact-me" @click.native="toggleMenu"
             >Contact me</nuxt-link
           >
         </div>
+        <a
+          href="https://www.instagram.com/ninata.art/"
+          target="_blank"
+          class="ig-icon"
+          v-html="require('~/assets/img/icon-instagram.svg?include')"
+        ></a>
       </div>
     </nav>
   </header>
@@ -27,16 +32,14 @@
 <script>
 export default {
   methods: {
-    toggleMenu: () => {
-      const hambuger = document.querySelector('.hamburger')
+    toggleMenu(e) {
+      const hamburger = document.querySelector('.hamburger')
       const menu = document.querySelector('.menu-container')
       const logo = document.querySelector('.logo')
 
-      hambuger.classList.toggle('open')
+      hamburger.classList.toggle('open')
       menu.classList.toggle('expanded')
       logo.classList.toggle('light')
-
-      console.log('clicked')
     },
   },
 }
@@ -82,8 +85,8 @@ header {
 
   .ham-button {
     position: relative;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     border-radius: 4px;
     border: none;
@@ -170,6 +173,17 @@ header {
 
     &.expanded {
       transform: translateX(0);
+    }
+
+    .ig-icon {
+      position: absolute;
+      bottom: 1%;
+      left: 7%;
+
+      ::v-deep svg {
+        fill: $white;
+        width: 40px;
+      }
     }
   }
 

@@ -2,7 +2,7 @@
   <main>
     <section id="hero">
       <div class="row">
-        <p class="bubble">Hi, I'm Nina. Welcome to my website!</p>
+        <p class="bubble">Hi, I'm Nina. Welcome to my website 😊</p>
         <div
           class="chibbi"
           v-html="require('~/assets/img/nina-standing.svg?include')"

@@ -4,17 +4,17 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Nina Ta',
+    title: 'Ninata',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Nina Ta | Illustrator | Animator',
+        content: 'Ninata | Illustrator | Animator',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -65,5 +65,12 @@ export default {
 
   optimizedImages: {
     optimizeImages: true,
+  },
+
+  pwa: {
+    icon: {
+      /* icon options */
+      fileName: 'favicon.png',
+    },
   },
 }

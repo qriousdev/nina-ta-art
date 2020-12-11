@@ -29,7 +29,7 @@
       </p>
       <input type="hidden" name="form-name" value="contact" />
       <p>
-        <button type="submit" class="btn-black">Send to Nina</button>
+        <button type="submit" class="btn-black">Send</button>
       </p>
     </form>
   </div>

@@ -15,7 +15,7 @@ export default {}
 
 <style lang="scss" scoped>
 #contact-form {
-  padding: 60px 0 60px;
+  padding: 100px 0 60px;
 
   .row {
     max-width: 600px;
