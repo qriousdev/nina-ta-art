@@ -72,6 +72,16 @@ $mobile-screen: 400px;
       url('~assets/fonts/source-sans-pro-v14-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+// TRANSITIONS
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
 // RESET
 * {
   margin: 0;

@@ -66,20 +66,20 @@
     <section id="gallery">
       <div class="row">
         <div v-if="show === 'anime'" class="anime masonry">
-          <div
+          <img
             v-for="(img, i) in animeImgs"
             :key="i"
-            class="anime-img"
+            :srcSet="require(`~/assets/img/portfolio/anime/${img}?size=300`)"
+            :src="require(`~/assets/img/portfolio/anime/${img}`)"
             @click="lightbox"
-          >
-            <img :src="require(`~/assets/img/portfolio/anime/${img}`)" />
-          </div>
+          />
         </div>
 
         <div v-if="show === 'chibi'" class="chibi masonry">
           <img
             v-for="(img, i) in chibiImgs"
             :key="i"
+            :srcSet="require(`~/assets/img/portfolio/chibi/${img}?size=300`)"
             :src="require(`~/assets/img/portfolio/chibi/${img}`)"
             @click="lightbox"
           />
@@ -89,6 +89,9 @@
           <img
             v-for="(img, i) in classicalImgs"
             :key="i"
+            :srcSet="
+              require(`~/assets/img/portfolio/classical/${img}?size=300`)
+            "
             :src="require(`~/assets/img/portfolio/classical/${img}`)"
             @click="lightbox"
           />
@@ -98,6 +101,7 @@
           <img
             v-for="(img, i) in designImgs"
             :key="i"
+            :srcSet="require(`~/assets/img/portfolio/design/${img}?size=300`)"
             :src="require(`~/assets/img/portfolio/design/${img}`)"
             @click="lightbox"
           />
@@ -107,6 +111,7 @@
           <img
             v-for="(img, i) in portraitImgs"
             :key="i"
+            :srcSet="require(`~/assets/img/portfolio/portrait/${img}?size=300`)"
             :src="require(`~/assets/img/portfolio/portrait/${img}`)"
             @click="lightbox"
           />
@@ -116,6 +121,7 @@
           <img
             v-for="(img, i) in styleImgs"
             :key="i"
+            :srcSet="require(`~/assets/img/portfolio/style/${img}?size=300`)"
             :src="require(`~/assets/img/portfolio/style/${img}`)"
             @click="lightbox"
           />
@@ -202,7 +208,7 @@ export default {
       const lightbox = document.querySelector('#lightbox')
       const img = lightbox.querySelector('img')
 
-      img.src = e.target.currentSrc
+      img.src = e.target.attributes.src.value
       lightbox.style.display = 'flex'
     },
 

@@ -25,7 +25,7 @@ export default {
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['~/plugins/vue-lazysizes.client.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -57,6 +57,13 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     publicPath: '/app/',
+
+    extend(config, { isDev, isClient, loaders: { vue } }) {
+      if (isClient) {
+        vue.transformAssetUrls.img = ['data-src', 'src']
+        vue.transformAssetUrls.source = ['data-srcset', 'srcset']
+      }
+    },
   },
 
   generate: {
@@ -64,7 +71,12 @@ export default {
   },
 
   optimizedImages: {
+    inlineImageLimit: -1,
     optimizeImages: true,
+    optimizeImagesInDev: false,
+    mozjpeg: {
+      quality: 85,
+    },
   },
 
   pwa: {
