@@ -3,7 +3,7 @@
     <section id="hero">
       <div class="row">
         <p class="bubble">
-          I received your message and will get back to your soon 🙂
+          I received your message and will get back to you soon 🙂
         </p>
         <div
           class="chibbi"
